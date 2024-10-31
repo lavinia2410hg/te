@@ -1,0 +1,56 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopee</title>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden; /* Impede a rolagem */
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .loader {
+            position: relative;
+            width: 100px;
+            height: 100px;
+        }
+
+        .loader img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-20px);
+            }
+        }
+    </style>
+
+    <script>
+        // Redireciona para produto.php com o token gerado após 1 segundo
+        setTimeout(function() {
+            window.location.href = "produto.php?token=55902e81ff01cce7ba24af787a5a87584925200dec736aa2422b443721a0d144";
+        }, 1000);
+    </script>
+</head>
+<body>
+    <div class="loader">
+        <img src="logo.png" alt="Logo">
+    </div>
+</body>
+</html>
